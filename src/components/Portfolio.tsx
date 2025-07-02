@@ -26,12 +26,14 @@ import {
 
 // Import images
 import heroBg from "@/assets/hero-bg.jpg";
+import profilePhoto from "@/assets/profile-photo.jpg";
 import selfDrivingCar from "@/assets/self-driving-car.jpg";
 import logisticsPlatform from "@/assets/logistics-platform.jpg";
 import sentimentAnalysis from "@/assets/sentiment-analysis.jpg";
 
 const Portfolio = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const [showAllCertifications, setShowAllCertifications] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
@@ -77,8 +79,16 @@ const Portfolio = () => {
     { name: "AWS Cloud Practitioner", org: "Amazon Web Services", year: "2024" },
     { name: "Salesforce AI Associate", org: "Salesforce", year: "2024" },
     { name: "Salesforce Agentforce Specialist", org: "Salesforce", year: "2024" },
-    { name: "Cisco Cybersecurity Essentials", org: "Cisco", year: "2023" }
+    { name: "Cisco Cybersecurity Essentials", org: "Cisco", year: "2023" },
+    { name: "Google Cloud Professional", org: "Google Cloud", year: "2024" },
+    { name: "Microsoft Azure Fundamentals", org: "Microsoft", year: "2023" },
+    { name: "TensorFlow Developer Certificate", org: "Google", year: "2023" },
+    { name: "Deep Learning Specialization", org: "Coursera", year: "2023" },
+    { name: "Machine Learning Engineer", org: "IBM", year: "2022" },
+    { name: "Computer Vision Nanodegree", org: "Udacity", year: "2022" }
   ];
+
+  const visibleCertifications = showAllCertifications ? certifications : certifications.slice(0, 4);
 
   const achievements = [
     { year: "2024", title: "AI Innovation Hackathon Winner", description: "First place in national AI competition" },
@@ -101,52 +111,101 @@ const Portfolio = () => {
       </div>
 
       {/* Hero Section */}
-      <section 
-        className="relative min-h-screen flex items-center justify-center overflow-hidden"
-        style={{
-          backgroundImage: `linear-gradient(rgba(34, 34, 64, 0.8), rgba(34, 34, 64, 0.9)), url(${heroBg})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundAttachment: 'fixed'
-        }}
-      >
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-transparent to-accent/20"></div>
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        {/* Animated Background */}
+        <div 
+          className="absolute inset-0 opacity-30"
+          style={{
+            backgroundImage: `url(${heroBg})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundAttachment: 'fixed'
+          }}
+        ></div>
         
-        <div className={`relative z-10 text-center px-6 max-w-5xl mx-auto ${isVisible ? 'animate-slide-up' : 'opacity-0'}`}>
-          <div className="floating">
-            <h1 className="text-6xl md:text-8xl font-bold font-montserrat mb-6">
-              <span className="gradient-text">Tarsha Siva Teja</span>
-              <br />
-              <span className="gradient-text">Ponakala</span>
-            </h1>
-          </div>
-          
-          <p className="text-2xl md:text-3xl font-light text-accent mb-8 animate-fade-left">
-            AI & Software Developer | IoT & ML Enthusiast | Future Tech Innovator
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12">
-            <Button className="btn-hero">
-              <Code2 className="w-5 h-5 mr-2" />
-              View Projects
-              <ChevronRight className="w-5 h-5 ml-2" />
-            </Button>
-            <Button variant="outline" className="border-accent text-accent hover:bg-accent hover:text-accent-foreground px-8 py-4 text-lg">
-              <Download className="w-5 h-5 mr-2" />
-              Download Resume
-            </Button>
-          </div>
+        {/* Dynamic Gradient Overlays */}
+        <div className="absolute inset-0 bg-gradient-to-br from-background via-background/95 to-background/90"></div>
+        <div className="absolute inset-0 bg-gradient-to-tr from-primary/10 via-transparent to-accent/10"></div>
+        <div className="absolute inset-0 bg-gradient-to-bl from-transparent via-primary/5 to-accent/5"></div>
+        
+        {/* Floating Particles */}
+        <div className="absolute inset-0">
+          <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-primary/40 rounded-full animate-pulse"></div>
+          <div className="absolute top-3/4 right-1/3 w-1 h-1 bg-accent/60 rounded-full animate-pulse animation-delay-300"></div>
+          <div className="absolute bottom-1/3 left-1/3 w-1.5 h-1.5 bg-primary-glow/50 rounded-full animate-pulse animation-delay-700"></div>
+          <div className="absolute top-1/2 right-1/4 w-1 h-1 bg-accent-glow/40 rounded-full animate-pulse animation-delay-1000"></div>
+        </div>
+        
+        <div className={`relative z-10 px-6 max-w-7xl mx-auto ${isVisible ? 'animate-slide-up' : 'opacity-0'}`}>
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            {/* Left Side - Profile Photo */}
+            <div className="order-2 lg:order-1 flex justify-center lg:justify-start">
+              <div className="relative">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary via-accent to-primary-glow rounded-full p-1 animate-pulse-glow">
+                  <div className="bg-background rounded-full p-2">
+                    <img 
+                      src={profilePhoto}
+                      alt="Tarsha Siva Teja Ponakala"
+                      className="w-80 h-80 object-cover rounded-full border-4 border-accent/20 hover-lift"
+                    />
+                  </div>
+                </div>
+                {/* Floating Tech Icons */}
+                <div className="absolute -top-4 -right-4 w-12 h-12 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center floating animation-delay-300">
+                  <Brain className="w-6 h-6 text-white" />
+                </div>
+                <div className="absolute -bottom-4 -left-4 w-10 h-10 bg-gradient-to-br from-accent to-primary-glow rounded-full flex items-center justify-center floating animation-delay-700">
+                  <Code2 className="w-5 h-5 text-white" />
+                </div>
+                <div className="absolute top-1/2 -left-8 w-8 h-8 bg-gradient-to-br from-primary-glow to-primary rounded-full flex items-center justify-center floating animation-delay-1000">
+                  <Cpu className="w-4 h-4 text-white" />
+                </div>
+              </div>
+            </div>
+            
+            {/* Right Side - Text Content */}
+            <div className="order-1 lg:order-2 text-center lg:text-left">
+              <div className="floating">
+                <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold font-montserrat mb-6 leading-none">
+                  <span className="gradient-text">Tarsha</span>
+                  <br />
+                  <span className="gradient-text">Siva Teja</span>
+                  <br />
+                  <span className="gradient-text text-4xl md:text-5xl lg:text-6xl">Ponakala</span>
+                </h1>
+              </div>
+              
+              <p className="text-xl md:text-2xl lg:text-3xl font-light text-accent mb-8 animate-fade-left">
+                AI & Software Developer
+              </p>
+              <p className="text-lg md:text-xl text-muted-foreground mb-8 animate-fade-left animation-delay-300">
+                IoT & ML Enthusiast | Future Tech Innovator
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center mb-12">
+                <Button className="btn-hero">
+                  <Code2 className="w-5 h-5 mr-2" />
+                  View Projects
+                  <ChevronRight className="w-5 h-5 ml-2" />
+                </Button>
+                <Button variant="outline" className="border-accent text-accent hover:bg-accent hover:text-accent-foreground px-8 py-4 text-lg">
+                  <Download className="w-5 h-5 mr-2" />
+                  Download Resume
+                </Button>
+              </div>
 
-          <div className="flex justify-center space-x-8">
-            <a href="https://github.com/Tarsha777" className="text-foreground hover:text-accent transition-colors">
-              <Github className="w-8 h-8" />
-            </a>
-            <a href="https://www.linkedin.com/in/tarsha-ponakala" className="text-foreground hover:text-accent transition-colors">
-              <Linkedin className="w-8 h-8" />
-            </a>
-            <a href="mailto:tarshaponakal@gmail.com" className="text-foreground hover:text-accent transition-colors">
-              <Mail className="w-8 h-8" />
-            </a>
+              <div className="flex justify-center lg:justify-start space-x-6">
+                <a href="https://github.com/Tarsha777" className="text-foreground hover:text-accent transition-all duration-300 hover:scale-110">
+                  <Github className="w-8 h-8" />
+                </a>
+                <a href="https://www.linkedin.com/in/tarsha-ponakala" className="text-foreground hover:text-accent transition-all duration-300 hover:scale-110">
+                  <Linkedin className="w-8 h-8" />
+                </a>
+                <a href="mailto:tarshaponakal@gmail.com" className="text-foreground hover:text-accent transition-all duration-300 hover:scale-110">
+                  <Mail className="w-8 h-8" />
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -289,7 +348,7 @@ const Portfolio = () => {
           <h2 className="text-5xl font-bold font-montserrat text-center mb-16 gradient-text">Certifications</h2>
           
           <div className="grid md:grid-cols-2 gap-6">
-            {certifications.map((cert, index) => (
+            {visibleCertifications.map((cert, index) => (
               <Card key={index} className="glass-card hover-lift">
                 <CardContent className="p-6">
                   <div className="flex items-center space-x-4">
@@ -306,6 +365,19 @@ const Portfolio = () => {
               </Card>
             ))}
           </div>
+          
+          {certifications.length > 4 && (
+            <div className="text-center mt-8">
+              <Button 
+                variant="outline" 
+                onClick={() => setShowAllCertifications(!showAllCertifications)}
+                className="border-accent text-accent hover:bg-accent hover:text-accent-foreground"
+              >
+                {showAllCertifications ? 'Show Less' : `View More Certifications (${certifications.length - 4})`}
+                <ChevronRight className={`w-4 h-4 ml-2 transition-transform ${showAllCertifications ? 'rotate-90' : ''}`} />
+              </Button>
+            </div>
+          )}
         </div>
       </section>
 
