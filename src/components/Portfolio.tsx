@@ -26,7 +26,7 @@ import {
 
 // Import images
 import heroBg from "@/assets/hero-bg.jpg";
-import profilePhoto from "@/assets/profile-photo.jpg";
+import profilePhoto from "../assets/profile-photo.jpg";
 import selfDrivingCar from "@/assets/self-driving-car.jpg";
 import logisticsPlatform from "@/assets/logistics-platform.jpg";
 import sentimentAnalysis from "@/assets/sentiment-analysis.jpg";
@@ -71,7 +71,7 @@ const Portfolio = () => {
       image: sentimentAnalysis,
       tech: ["Python", "NLP", "ML", "Data Visualization"],
       github: "https://github.com/Tarsha777/Prodigy",
-      
+      demo:" "
     }
   ];
 
