@@ -44,57 +44,55 @@ const Portfolio = () => {
     "Software Development": ["JavaScript", "React", "Node.js", "TypeScript", "Java", "C++"],
     "IoT & Hardware": ["Arduino", "Raspberry Pi", "Sensors", "Embedded Systems", "Hardware Integration"],
     "Web Technologies": ["React", "Next.js", "HTML5", "CSS3", "Tailwind CSS", "REST APIs"],
-    "Cloud & DevOps": ["AWS", "Docker", "Git", "Linux", "CI/CD", "Microservices"],
+    "Cloud & DevOps": ["AWS", "Docker", "Git", "Linux"],
     "Data & Analytics": ["SQL", "MongoDB", "Data Visualization", "Pandas", "NumPy", "Matplotlib"]
   };
 
   const projects = [
     {
       title: "Autonomous Self-Driving Car",
-      description: "Advanced autonomous vehicle system with computer vision, machine learning, and real-time decision making. Features obstacle detection, path planning, and adaptive cruise control.",
+      description: "A Raspberry Pi-based self-driving car with GPS, real-time navigation, and object detection. This is a functional self-driving vehicle prototype capable of autonomous navigation, obstacle detection, and lane tracking using real-time computer vision and IoT integration. Integrated a web dashboard for monitoring the car's operations.",
       image: selfDrivingCar,
-      tech: ["Python", "OpenCV", "TensorFlow", "ROS", "Arduino"],
-      github: "https://github.com/Tarsha777",
-      demo: "#"
+      tech: ["Python", "OpenCV", "Raspberry Pi", "Sensors", "IoT"],
+      github: "https://github.com/Tarsha777/Autonomous_Car_Prototype",
+      demo: "https://drive.google.com/file/d/1KMR6CaVmjxM7jrvvaXdzsDBnqUM_Cvvn/view?usp=sharing"
     },
     {
       title: "KR-Transport Logistics Platform",
-      description: "Full-stack logistics management system with AI-powered route optimization, real-time tracking, and predictive analytics for supply chain efficiency.",
+      description: "Developed a web-based logistics platform for real-time tanker booking and transport management. The system simplifies tanker scheduling and automates pricing based on distance and tanker type.",
       image: logisticsPlatform,
-      tech: ["React", "Node.js", "MongoDB", "AI Optimization"],
-      github: "https://github.com/Tarsha777",
-      demo: "#"
+      tech: ["React", "Node.js", "MongoDB"],
+      github: "https://github.com/Tarsha777/KRoilTransport",
+      demo: "https://kr-oil-transport.vercel.app/"
     },
     {
       title: "Sentiment Analysis Model",
-      description: "Advanced NLP model for real-time sentiment analysis with 94% accuracy. Features emotion detection, sentiment scoring, and interactive visualization dashboard.",
+      description: "Developed ML model classifying movie reviews as Positive, Negative, or Neutral. Enabled movie ratings based on automated review analysis. Optimized models using real-world datasets for high accuracy.",
       image: sentimentAnalysis,
-      tech: ["Python", "NLTK", "Transformers", "Flask", "React"],
-      github: "https://github.com/Tarsha777",
-      demo: "#"
+      tech: ["Python", "NLP", "ML", "Data Visualization"],
+      github: "https://github.com/Tarsha777/Prodigy",
+      
     }
   ];
 
   const certifications = [
-    { name: "AWS Cloud Practitioner", org: "Amazon Web Services", year: "2024" },
-    { name: "Salesforce AI Associate", org: "Salesforce", year: "2024" },
-    { name: "Salesforce Agentforce Specialist", org: "Salesforce", year: "2024" },
+    { name: "AWS Cloud Practitioner", org: "Amazon Web Services", year: "2025" },
+    { name: "Salesforce AI Associate", org: "Salesforce", year: "2025" },
+    { name: "Salesforce Agentforce Specialist", org: "Salesforce", year: "2025" },
     { name: "Cisco Cybersecurity Essentials", org: "Cisco", year: "2023" },
-    { name: "Google Cloud Professional", org: "Google Cloud", year: "2024" },
-    { name: "Microsoft Azure Fundamentals", org: "Microsoft", year: "2023" },
-    { name: "TensorFlow Developer Certificate", org: "Google", year: "2023" },
-    { name: "Deep Learning Specialization", org: "Coursera", year: "2023" },
-    { name: "Machine Learning Engineer", org: "IBM", year: "2022" },
-    { name: "Computer Vision Nanodegree", org: "Udacity", year: "2022" }
+    { name: "Cisco Networking Essentials", org: "Cisco", year: "2025" },
+    { name: "IBM AI Fundementals", org: "IBM", year: "2023" },
+    { name: "Joy of computing using python, Data Analytics", org: "NPTEL", year: "2024" },
+    { name: "Java, JavaScript, HTML5, CSS3, React, Node.js, ", org: "Infosys SpringBoard", year: "2024" },
   ];
 
   const visibleCertifications = showAllCertifications ? certifications : certifications.slice(0, 4);
 
   const achievements = [
-    { year: "2024", title: "AI Innovation Hackathon Winner", description: "First place in national AI competition" },
-    { year: "2023", title: "IoT Challenge Champion", description: "Best IoT solution for smart cities" },
-    { year: "2023", title: "Tech Excellence Award", description: "Outstanding contribution to autonomous systems" },
-    { year: "2022", title: "ML Research Publication", description: "Published research on computer vision applications" }
+    { year: "2024", title: "3rd Prize winner in 24 hours national level hackathon", description: "Secured 3rd place in a 24 hours national level hackathon by developing a working self-driving car prototype using Raspberry Pi." },
+    { year: "2023", title: "Winner of challenging AI", description: "Won the compitition by promptness and accuracy." },
+    { year: "2023", title: "Basketball Runner-up", description: "Runner-up in the college level basketball tournament." },
+    { year: "2022", title: "Won 2nd Place in project expo", description: "Developed an ATM system in C which simulates the transactions of a real world ATM system." }
   ];
 
   return (
@@ -217,10 +215,9 @@ const Portfolio = () => {
             <div>
               <h2 className="text-5xl font-bold font-montserrat mb-8 gradient-text">About Me</h2>
               <p className="text-xl text-muted-foreground leading-relaxed mb-8">
-                I'm a passionate AI engineer and software developer with expertise in creating cutting-edge 
-                solutions that bridge the gap between artificial intelligence and real-world applications. 
-                My work spans autonomous systems, IoT innovations, and machine learning models that deliver 
-                measurable impact.
+              Computer Science undergrad specializing in AI and Software Development. Skilled in building scalable solutions and
+ integrating AI/ML into real-world products. Strong in cloud computing, full-stack web development, and IoT systems.
+ Passionate about creating tech that drives impact.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed mb-8">
                 With hands-on experience in building autonomous vehicles, logistics platforms, and AI models, 
@@ -230,15 +227,15 @@ const Portfolio = () => {
               <div className="flex flex-wrap gap-4">
                 <Badge className="skill-badge">
                   <Brain className="w-4 h-4 mr-2" />
-                  AI Innovation
+                  AI
                 </Badge>
                 <Badge className="skill-badge">
                   <Cpu className="w-4 h-4 mr-2" />
-                  System Architecture
+                  IoT
                 </Badge>
                 <Badge className="skill-badge">
                   <Zap className="w-4 h-4 mr-2" />
-                  Performance Optimization
+                  DSA
                 </Badge>
               </div>
             </div>
