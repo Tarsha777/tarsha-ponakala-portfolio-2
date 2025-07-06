@@ -536,7 +536,7 @@ const Portfolio = () => {
                 <a href="https://www.linkedin.com/in/tarsha-ponakala" className="text-foreground hover:text-accent transition-colors">
                   <Linkedin className="w-8 h-8" />
                 </a>
-                <a href="https://tarsha-portfolio.vercel.app/" className="text-foreground hover:text-accent transition-colors">
+                <a href="https://tarsha-ponakala-portfolio.vercel.app/" className="text-foreground hover:text-accent transition-colors">
                   <Globe className="w-8 h-8" />
                 </a>
               </div>
