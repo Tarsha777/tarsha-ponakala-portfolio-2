@@ -1,73 +1,36 @@
-# Welcome to your Lovable project
+# 🚀 Tarsha Siva Teja Ponakala — Futuristic AI & Software Developer Portfolio
 
-## Project info
+![Portfolio Banner] <!-- Replace with your actual banner path -->
 
-**URL**: https://lovable.dev/projects/ec6d5453-16ee-4045-a197-fd07febe76e6
+## 👨‍💻 About Me
 
-## How can I edit this code?
+Welcome to my personal portfolio — a modern, responsive, and visually aesthetic website showcasing my expertise in AI, Software Development, IoT, and cutting-edge technologies.
 
-There are several ways of editing your application.
+💡 I’m **Tarsha Siva Teja Ponakala**, an AI Engineer & Full-Stack Developer passionate about:
 
-**Use Lovable**
+- ⚡ Building Autonomous Systems  
+- 🌐 Developing Scalable Web Applications  
+- 🤖 Innovating with IoT & Machine Learning  
+- 📷 Computer Vision Projects  
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/ec6d5453-16ee-4045-a197-fd07febe76e6) and start prompting.
+Explore my work, skills, and experience designed with interactive UI and futuristic themes.
 
-Changes made via Lovable will be committed automatically to this repo.
+---
 
-**Use your preferred IDE**
+## 🛠 Tech Stack
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+| Frontend         | Backend / Tools      | Design & Libraries | Deployment |
+|------------------|---------------------|--------------------|------------|
+| ![React](https://img.shields.io/badge/-React-61DAFB?logo=react&logoColor=white) | ![TypeScript](https://img.shields.io/badge/-TypeScript-3178C6?logo=typescript&logoColor=white) | ![TailwindCSS](https://img.shields.io/badge/-TailwindCSS-06B6D4?logo=tailwindcss&logoColor=white) | ![Vercel](https://img.shields.io/badge/-Vercel-000000?logo=vercel) |
+| ![Vite](https://img.shields.io/badge/-Vite-646CFF?logo=vite&logoColor=white) | ![Git](https://img.shields.io/badge/-Git-F05032?logo=git&logoColor=white) | ![Lucide Icons](https://img.shields.io/badge/-Lucide%20Icons-000000?logo=lucide&logoColor=white) | ![GitHub Pages](https://img.shields.io/badge/-GitHub%20Pages-181717?logo=github) |
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+**Bonus Features:**
+- ✨ Fully Responsive  
+- 🌌 Futuristic Design with Gradients, Glow Effects, Animated Elements  
+- 💻 Modern UI inspired by cutting-edge developer portfolios  
+- 🎨 Fonts: [Poppins](https://fonts.google.com/specimen/Poppins), [Montserrat](https://fonts.google.com/specimen/Montserrat)  
 
-Follow these steps:
+---
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+## 📁 Project Structure
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/ec6d5453-16ee-4045-a197-fd07febe76e6) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
