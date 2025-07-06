@@ -25,10 +25,14 @@ import {
 } from "lucide-react";
 
 // Import images
+import portfolio from"@/assets/tst-potfolio-logo.png"
 import heroBg from "@/assets/hero-bg.jpg";
-import profilePhoto from "../assets/profile-photo.jpg";
-import selfDrivingCar from "@/assets/self-driving-car.jpg";
-import logisticsPlatform from "@/assets/logistics-platform.jpg";
+import atm from "@/assets/atm-logo.webp";
+import photography from "@/assets/logo1.png";
+import profilePhoto from "@/assets/profile-photo.jpg";
+import habit from "@/assets/Habit-Tracker.jpg"
+import selfDrivingCar from "@/assets/self-driving-car.png";
+import logisticsPlatform from "@/assets/green.jpg";
 import sentimentAnalysis from "@/assets/sentiment-analysis.jpg";
 
 const Portfolio = () => {
@@ -41,17 +45,17 @@ const Portfolio = () => {
 
   const skills = {
     "AI & Machine Learning": ["Python", "TensorFlow", "PyTorch", "Computer Vision", "NLP", "Deep Learning"],
-    "Software Development": ["JavaScript", "React", "Node.js", "TypeScript", "Java", "C++"],
+    "Software Development": ["JavaScript", "React", "Node.js", "TypeScript", "Java", "C"],
     "IoT & Hardware": ["Arduino", "Raspberry Pi", "Sensors", "Embedded Systems", "Hardware Integration"],
     "Web Technologies": ["React", "Next.js", "HTML5", "CSS3", "Tailwind CSS", "REST APIs"],
-    "Cloud & DevOps": ["AWS", "Docker", "Git", "Linux"],
+    "Cloud & DevOps": ["AWS", "Git", "GitHub"],
     "Data & Analytics": ["SQL", "MongoDB", "Data Visualization", "Pandas", "NumPy", "Matplotlib"]
   };
 
   const projects = [
     {
       title: "Autonomous Self-Driving Car",
-      description: "A Raspberry Pi-based self-driving car with GPS, real-time navigation, and object detection. This is a functional self-driving vehicle prototype capable of autonomous navigation, obstacle detection, and lane tracking using real-time computer vision and IoT integration. Integrated a web dashboard for monitoring the car's operations.",
+      description: "A smart self-driving car prototype combining Lane Detection, Traffic Signal Recognition, Obstacle Avoidance, and Integrated a Real-Time Web Dashboard for monitoring vehicle status and camera feed.",
       image: selfDrivingCar,
       tech: ["Python", "OpenCV", "Raspberry Pi", "Sensors", "IoT"],
       github: "https://github.com/Tarsha777/Autonomous_Car_Prototype",
@@ -66,13 +70,44 @@ const Portfolio = () => {
       demo: "https://kr-oil-transport.vercel.app/"
     },
     {
+      title: "Photography Portfolio Site",
+      description: "A visually immersive website showcasing photography work with modern, responsive design.",
+      tech: ["React", "TailwindCSS", "Responsive Design", "Animations"],
+      github: "https://github.com/Tarsha777/ShutterBug-Portfolio",
+      demo:"https://tarsha777.github.io/ShutterBug-Portfolio/",
+      image: photography,  // Import at the top
+    },
+    {
+      title: "Portfolio",
+      description: "The website you are currently viewing",
+      image: portfolio,
+      tech: ["React", "Tailwind CSS", "JavaScript", "Vite","TypeScript"],
+      github: "https://github.com/Tarsha777/tarsha-ponakala-portfolio-forge",
+    },
+    {
       title: "Sentiment Analysis Model",
-      description: "Developed ML model classifying movie reviews as Positive, Negative, or Neutral. Enabled movie ratings based on automated review analysis. Optimized models using real-world datasets for high accuracy.",
+      description: "Developed ML model classifying Product reviews as Positive, Negative, or Neutral. Enabled Product ratings based on automated sentiment analysis of reviews. Optimized models using real-world datasets for high accuracy.",
       image: sentimentAnalysis,
       tech: ["Python", "NLP", "ML", "Data Visualization"],
       github: "https://github.com/Tarsha777/Prodigy",
-      demo:" "
+      
+    },
+    {
+      title: "ATM Simulation Project",
+      description: "ATM system prototype with transaction simulation, PIN authentication, and secure operations.",
+      tech: ["Java", "OOP", "CLI Interface", "Banking Simulation"],
+      
+      image: atm,  // Import at the top
+    },
+    {
+      title: "Habit Tracker with AI Insights(Under-development)",
+      description: "Habit tracking app to track habits, with AI-based productivity suggestions and gamified achievements.",
+      image: habit,
+      tech: ["React", "Node.js", "MongoDB", "AI"],
+      github: "https://github.com/Tarsha777/Habit-tracker-MERN",
     }
+    
+    
   ];
 
   const certifications = [
@@ -89,7 +124,7 @@ const Portfolio = () => {
   const visibleCertifications = showAllCertifications ? certifications : certifications.slice(0, 4);
 
   const achievements = [
-    { year: "2024", title: "3rd Prize winner in 24 hours national level hackathon", description: "Secured 3rd place in a 24 hours national level hackathon by developing a working self-driving car prototype using Raspberry Pi." },
+    { year: "2024", title: "24 hours National Level Hackathon", description: "Secured 3rd place in a 24 hours national level hackathon by developing a working self-driving car prototype using Raspberry Pi." },
     { year: "2023", title: "Winner of challenging AI", description: "Won the compitition by promptness and accuracy." },
     { year: "2023", title: "Basketball Runner-up", description: "Runner-up in the college level basketball tournament." },
     { year: "2022", title: "Won 2nd Place in project expo", description: "Developed an ATM system in C which simulates the transactions of a real world ATM system." }
@@ -122,9 +157,10 @@ const Portfolio = () => {
         ></div>
         
         {/* Dynamic Gradient Overlays */}
-        <div className="absolute inset-0 bg-gradient-to-br from-background via-background/95 to-background/90"></div>
-        <div className="absolute inset-0 bg-gradient-to-tr from-primary/10 via-transparent to-accent/10"></div>
-        <div className="absolute inset-0 bg-gradient-to-bl from-transparent via-primary/5 to-accent/5"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-background via-background/95 to-background/60"></div>
+        <div className="absolute inset-0 bg-gradient-to-tr from-primary/10 via-transparent to-accent/5"></div>
+        <div className="absolute inset-0 bg-gradient-to-bl from-transparent via-primary/5 to-accent/15"></div>
+        
         
         {/* Floating Particles */}
         <div className="absolute inset-0">
@@ -132,34 +168,50 @@ const Portfolio = () => {
           <div className="absolute top-3/4 right-1/3 w-1 h-1 bg-accent/60 rounded-full animate-pulse animation-delay-300"></div>
           <div className="absolute bottom-1/3 left-1/3 w-1.5 h-1.5 bg-primary-glow/50 rounded-full animate-pulse animation-delay-700"></div>
           <div className="absolute top-1/2 right-1/4 w-1 h-1 bg-accent-glow/40 rounded-full animate-pulse animation-delay-1000"></div>
+          
+          
+
+          
         </div>
         
         <div className={`relative z-10 px-6 max-w-7xl mx-auto ${isVisible ? 'animate-slide-up' : 'opacity-0'}`}>
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             {/* Left Side - Profile Photo */}
-            <div className="order-2 lg:order-1 flex justify-center lg:justify-start">
-              <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary via-accent to-primary-glow rounded-full p-1 animate-pulse-glow">
-                  <div className="bg-background rounded-full p-2">
-                    <img 
-                      src={profilePhoto}
-                      alt="Tarsha Siva Teja Ponakala"
-                      className="w-80 h-80 object-cover rounded-full border-4 border-accent/20 hover-lift"
-                    />
-                  </div>
-                </div>
-                {/* Floating Tech Icons */}
-                <div className="absolute -top-4 -right-4 w-12 h-12 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center floating animation-delay-300">
-                  <Brain className="w-6 h-6 text-white" />
-                </div>
-                <div className="absolute -bottom-4 -left-4 w-10 h-10 bg-gradient-to-br from-accent to-primary-glow rounded-full flex items-center justify-center floating animation-delay-700">
-                  <Code2 className="w-5 h-5 text-white" />
-                </div>
-                <div className="absolute top-1/2 -left-8 w-8 h-8 bg-gradient-to-br from-primary-glow to-primary rounded-full flex items-center justify-center floating animation-delay-1000">
-                  <Cpu className="w-4 h-4 text-white" />
-                </div>
-              </div>
-            </div>
+            <div className="order-2 lg:order-1 flex justify-start lg:justify-start">
+            <div className="relative flex flex-col items-center">
+  
+  {/* Floating Greeting */}
+  <div className="mb-4 text-accent text-xl font-semibold animate-fade-left">
+   
+  </div>
+
+  {/* Outer Gradient Border */}
+  <div className="relative">
+    <div className="absolute inset-0 bg-gradient-to-br from-primary via-accent to-primary-glow rounded-full p-1 animate-pulse-glow"></div>
+    
+    {/* Profile Photo */}
+    <div className="relative flex justify-center items-center w-80 h-80 bg-gradient-to-br from-primary via-accent to-primary-glow rounded-full p-2">
+      <img 
+        src={profilePhoto} 
+        alt="Tarsha Siva Teja Ponakala" 
+        className="w-full h-full object-cover rounded-full border-4 border-accent hover-lift" 
+      />
+    </div>
+
+    {/* Floating Tech Icons */}
+    <div className="absolute -top-4 -right-4 w-12 h-12 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center floating animation-delay-300">
+      <Brain className="w-6 h-6 text-white" />
+    </div>
+    <div className="absolute -bottom-4 -left-4 w-10 h-10 bg-gradient-to-br from-accent to-primary-glow rounded-full flex items-center justify-center floating animation-delay-700">
+      <Code2 className="w-5 h-5 text-white" />
+    </div>
+    <div className="absolute top-1/2 -left-8 w-8 h-8 bg-gradient-to-br from-primary-glow to-primary rounded-full flex items-center justify-center floating animation-delay-1000">
+      <Cpu className="w-4 h-4 text-white" />
+    </div>
+  </div>
+
+</div>
+</div>
             
             {/* Right Side - Text Content */}
             <div className="order-1 lg:order-2 text-center lg:text-left">
@@ -181,15 +233,23 @@ const Portfolio = () => {
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center mb-12">
-                <Button className="btn-hero">
-                  <Code2 className="w-5 h-5 mr-2" />
-                  View Projects
-                  <ChevronRight className="w-5 h-5 ml-2" />
-                </Button>
-                <Button variant="outline" className="border-accent text-accent hover:bg-accent hover:text-accent-foreground px-8 py-4 text-lg">
-                  <Download className="w-5 h-5 mr-2" />
-                  Download Resume
-                </Button>
+              <Button className="btn-hero" onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}>
+  <Code2 className="w-5 h-5 mr-2" />
+  View Projects
+  <ChevronRight className="w-5 h-5 ml-2" />
+</Button>
+
+<a 
+  href="https://drive.google.com/file/d/19d7a6R9OuH4QIlDFQ-mHdF_5Cd7YABCj/view?usp=sharing" 
+  target="_blank" 
+  rel="noopener noreferrer"
+>
+  <Button variant="outline" className="border-accent text-accent hover:bg-accent hover:text-accent-foreground px-8 py-4 text-lg">
+    <Download className="w-5 h-5 mr-2" />
+    Download Resume
+  </Button>
+</a>
+
               </div>
 
               <div className="flex justify-center lg:justify-start space-x-6">
@@ -199,7 +259,7 @@ const Portfolio = () => {
                 <a href="https://www.linkedin.com/in/tarsha-ponakala" className="text-foreground hover:text-accent transition-all duration-300 hover:scale-110">
                   <Linkedin className="w-8 h-8" />
                 </a>
-                <a href="mailto:tarshaponakal@gmail.com" className="text-foreground hover:text-accent transition-all duration-300 hover:scale-110">
+                <a href="mailto:tarshaponakala@gmail.com" className="text-foreground hover:text-accent transition-all duration-300 hover:scale-110">
                   <Mail className="w-8 h-8" />
                 </a>
               </div>
@@ -257,7 +317,8 @@ const Portfolio = () => {
       </section>
 
       {/* Projects Section */}
-      <section className="py-24 px-6 bg-gradient-to-br from-card/50 to-transparent">
+      <section id="projects" className="py-24 px-6 bg-gradient-to-br from-card/50 to-transparent">
+
         <div className="max-w-7xl mx-auto">
           <h2 className="text-5xl font-bold font-montserrat text-center mb-16 gradient-text">Featured Projects</h2>
           
@@ -272,10 +333,23 @@ const Portfolio = () => {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <Button size="sm" className="bg-primary/80 backdrop-blur-sm">
-                      <ExternalLink className="w-4 h-4" />
-                    </Button>
-                  </div>
+  {project.demo ? (
+    <a 
+      href={project.demo} 
+      target="_blank" 
+      rel="noopener noreferrer"
+    >
+      <Button size="sm" className="bg-primary/80 backdrop-blur-sm">
+        <ExternalLink className="w-4 h-4" />
+      </Button>
+    </a>
+  ) : (
+    <Button size="sm" className="bg-primary/80 backdrop-blur-sm" disabled>
+      <ExternalLink className="w-4 h-4" />
+    </Button>
+  )}
+</div>
+
                 </div>
                 
                 <CardHeader>
@@ -295,15 +369,31 @@ const Portfolio = () => {
                   </div>
                   
                   <div className="flex gap-3">
-                    <Button size="sm" variant="outline" className="flex-1">
-                      <Github className="w-4 h-4 mr-2" />
-                      Code
-                    </Button>
-                    <Button size="sm" className="flex-1">
-                      <ExternalLink className="w-4 h-4 mr-2" />
-                      Demo
-                    </Button>
-                  </div>
+  <a 
+    href={project.github} 
+    target="_blank" 
+    rel="noopener noreferrer"
+    className="flex-1"
+  >
+    <Button size="sm" variant="outline" className="w-full">
+      <Github className="w-4 h-4 mr-2" />
+      Code
+    </Button>
+  </a>
+
+  <a 
+    href={project.demo} 
+    target="_blank" 
+    rel="noopener noreferrer"
+    className="flex-1"
+  >
+    <Button size="sm" className="w-full" disabled={!project.demo}>
+      <ExternalLink className="w-4 h-4 mr-2" />
+      Demo
+    </Button>
+  </a>
+</div>
+
                 </CardContent>
               </Card>
             ))}
@@ -426,7 +516,7 @@ const Portfolio = () => {
               <div className="space-y-4">
                 <div className="flex items-center space-x-3">
                   <Mail className="w-6 h-6 text-accent" />
-                  <span>tarshaponakal@gmail.com</span>
+                  <span>tarshaponakala@gmail.com</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Phone className="w-6 h-6 text-accent" />
@@ -453,38 +543,24 @@ const Portfolio = () => {
             
             <Card className="glass-card">
               <CardContent className="p-6">
-                <form className="space-y-6">
-                  <div>
-                    <Input 
-                      placeholder="Your Name" 
-                      className="bg-background/50 border-accent/20 focus:border-accent"
-                    />
-                  </div>
-                  <div>
-                    <Input 
-                      type="email" 
-                      placeholder="Your Email" 
-                      className="bg-background/50 border-accent/20 focus:border-accent"
-                    />
-                  </div>
-                  <div>
-                    <Input 
-                      placeholder="Subject" 
-                      className="bg-background/50 border-accent/20 focus:border-accent"
-                    />
-                  </div>
-                  <div>
-                    <Textarea 
-                      placeholder="Your message..." 
-                      rows={4}
-                      className="bg-background/50 border-accent/20 focus:border-accent resize-none"
-                    />
-                  </div>
-                  <Button className="btn-hero w-full">
-                    <Mail className="w-5 h-5 mr-2" />
-                    Send Message
-                  </Button>
-                </form>
+              <form 
+  action="https://formsubmit.co/tarshaponakala@gmail.com" 
+  method="POST"
+  className="space-y-6"
+>
+  <input type="hidden" name="_captcha" value="false" />
+  
+  <Input name="name" placeholder="Your Name" required />
+  <Input type="email" name="email" placeholder="Your Email" required />
+  <Input name="subject" placeholder="Subject" required />
+  <Textarea name="message" rows={4} placeholder="Your message..." required />
+
+  <Button type="submit" className="btn-hero w-full">
+    <Mail className="w-5 h-5 mr-2" />
+    Send Message
+  </Button>
+</form>
+
               </CardContent>
             </Card>
           </div>
@@ -495,11 +571,9 @@ const Portfolio = () => {
       <footer className="py-12 px-6 border-t border-border/10">
         <div className="max-w-4xl mx-auto text-center">
           <p className="text-muted-foreground">
-            © 2024 Tarsha Siva Teja Ponakala. Built with React, TypeScript & modern web technologies.
+            © 2025 Tarsha Siva Teja Ponakala.
           </p>
-          <p className="text-sm text-muted-foreground mt-2">
-            Designed & Developed with ❤️ for innovation and excellence.
-          </p>
+          
         </div>
       </footer>
     </div>
