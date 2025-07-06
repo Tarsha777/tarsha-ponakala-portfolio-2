@@ -1,6 +1,8 @@
 # 🚀 Tarsha Siva Teja Ponakala — Futuristic AI & Software Developer Portfolio
 
-![Portfolio Banner] <!-- Replace with your actual banner path -->
+![Portfolio Banner]
+![image](https://github.com/user-attachments/assets/13c13b9a-93c8-4877-a2b1-c03dd1819ea0)
+<!-- Replace with your actual banner path -->
 
 ## 👨‍💻 About Me
 
