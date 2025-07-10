@@ -83,7 +83,7 @@ const Portfolio = () => {
       image: portfolio,
       tech: ["React", "Tailwind CSS", "JavaScript", "Vite","TypeScript"],
       github: "https://github.com/Tarsha777/tarsha-ponakala-portfolio-forge",
-      demo:"https://tarsha-ponakala-portfolio.vercel.app/";
+      demo:"https://tarsha-ponakala-portfolio.vercel.app/",
     },
     {
       title: "Sentiment Analysis Model",
