@@ -106,7 +106,7 @@ const Portfolio = () => {
       image: habit,
       tech: ["React", "Node.js", "MongoDB", "AI"],
       github: "https://github.com/Tarsha777/Habit-tracker-MERN",
-    }
+    },
     
     
   ];
