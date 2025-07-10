@@ -83,14 +83,14 @@ const Portfolio = () => {
       image: portfolio,
       tech: ["React", "Tailwind CSS", "JavaScript", "Vite","TypeScript"],
       github: "https://github.com/Tarsha777/tarsha-ponakala-portfolio-forge",
-      demo:"https://tarsha-ponakala-portfolio.vercel.app/",
+      demo:"https://tarsha-ponakala-portfolio.vercel.app/"
     },
     {
       title: "Sentiment Analysis Model",
       description: "Developed ML model classifying Product reviews as Positive, Negative, or Neutral. Enabled Product ratings based on automated sentiment analysis of reviews. Optimized models using real-world datasets for high accuracy.",
       image: sentimentAnalysis,
       tech: ["Python", "NLP", "ML", "Data Visualization"],
-      github: "https://github.com/Tarsha777/Prodigy",
+      github: "https://github.com/Tarsha777/Prodigy"
       
     },
     {
@@ -98,14 +98,14 @@ const Portfolio = () => {
       description: "ATM system prototype with transaction simulation, PIN authentication, and secure operations.",
       tech: ["Java", "OOP", "CLI Interface", "Banking Simulation"],
       
-      image: atm,  // Import at the top
+      image: atm  // Import at the top
     },
     {
       title: "Habit Tracker with AI Insights(Under-development)",
       description: "Habit tracking app to track habits, with AI-based productivity suggestions and gamified achievements.",
       image: habit,
       tech: ["React", "Node.js", "MongoDB", "AI"],
-      github: "https://github.com/Tarsha777/Habit-tracker-MERN",
+      github: "https://github.com/Tarsha777/Habit-tracker-MERN"
     },
     
     
