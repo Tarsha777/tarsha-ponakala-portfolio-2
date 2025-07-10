@@ -32,7 +32,5 @@ Explore my work, skills, and experience designed with interactive UI and futuris
 - 💻 Modern UI inspired by cutting-edge developer portfolios  
 - 🎨 Fonts: [Poppins](https://fonts.google.com/specimen/Poppins), [Montserrat](https://fonts.google.com/specimen/Montserrat)  
 
----
 
-## 📁 Project Structure
 
