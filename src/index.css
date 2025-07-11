@@ -2,56 +2,60 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Clean Red & White Portfolio Design System - All colors MUST be HSL */
+/* Futuristic Portfolio Design System - All colors MUST be HSL */
 
 @layer base {
   :root {
-    /* Clean Core Colors */
-    --background: 0 0% 99%;
-    --foreground: 0 0% 7%;
+    /* Core Theme Colors */
+    --background: 222 84% 4.9%;
+    --foreground: 210 40% 98%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 7%;
+    --card: 222 47% 11%;
+    --card-foreground: 210 40% 98%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 7%;
+    --popover: 222 47% 11%;
+    --popover-foreground: 210 40% 98%;
 
-    /* Bold Red Primary */
-    --primary: 354 80% 40%;
-    --primary-foreground: 0 0% 100%;
+    /* Futuristic Primary Colors */
+    --primary: 264 83% 57%;
+    --primary-foreground: 210 40% 98%;
+    --primary-glow: 264 100% 75%;
 
-    /* Clean Secondary */
-    --secondary: 0 0% 96%;
-    --secondary-foreground: 0 0% 9%;
+    /* Accent Colors */
+    --secondary: 217 33% 17%;
+    --secondary-foreground: 210 40% 98%;
 
-    --muted: 0 0% 96%;
-    --muted-foreground: 0 0% 45%;
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20% 65%;
 
-    --accent: 354 80% 40%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 191 100% 50%;
+    --accent-foreground: 222 84% 4.9%;
+    --accent-glow: 191 100% 75%;
 
     --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 100%;
+    --destructive-foreground: 210 40% 98%;
 
-    --border: 0 0% 90%;
-    --input: 0 0% 96%;
-    --ring: 354 80% 40%;
+    --border: 217 33% 17%;
+    --input: 217 33% 17%;
+    --ring: 264 83% 57%;
 
     --radius: 0.75rem;
 
-    /* Clean Extended Colors */
-    --charcoal: 0 0% 20%;
-    --light-gray: 0 0% 96%;
-    --divider: 354 80% 40%;
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    --gradient-accent: linear-gradient(135deg, hsl(var(--accent)), hsl(var(--accent-glow)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--background)) 0%, hsl(var(--primary)) 50%, hsl(var(--accent)) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(var(--card)) 0%, hsla(var(--primary), 0.05) 100%);
+    
+    /* Shadows */
+    --shadow-glow: 0 0 40px hsla(var(--primary), 0.3);
+    --shadow-accent-glow: 0 0 30px hsla(var(--accent), 0.4);
+    --shadow-card: 0 10px 30px -15px hsla(var(--primary), 0.3);
+    --shadow-floating: 0 20px 60px -20px hsla(var(--primary), 0.4);
 
-    /* Minimal Shadows */
-    --shadow-clean: 0 1px 3px hsla(0, 0%, 0%, 0.1);
-    --shadow-card: 0 4px 12px hsla(0, 0%, 0%, 0.05);
-    --shadow-button: 0 2px 8px hsla(354, 80%, 40%, 0.2);
-
-    /* Clean Transitions */
-    --transition-smooth: all 0.2s ease-in-out;
-    --transition-button: all 0.15s ease-in-out;
+    /* Animations */
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
     --sidebar-background: 0 0% 98%;
 
@@ -125,86 +129,78 @@
 }
 
 @layer components {
-  /* Clean Hero Button */
+  /* Hero Button Variant */
   .btn-hero {
-    @apply bg-primary text-primary-foreground px-8 py-4 rounded-lg font-semibold text-lg;
-    @apply transition-all duration-200 hover:bg-primary/90;
-    box-shadow: var(--shadow-button);
+    @apply bg-gradient-to-r from-primary to-accent text-primary-foreground px-8 py-4 rounded-xl font-semibold text-lg;
+    @apply hover:shadow-[var(--shadow-glow)] transition-all duration-500 hover:scale-105;
+    @apply border border-primary/20;
   }
   
-  .btn-hero:hover {
-    transform: translateY(-1px);
-    box-shadow: var(--shadow-button);
-  }
-  
-  /* Clean Card */
+  /* Glass Card Effect */
   .glass-card {
-    @apply bg-card border border-border rounded-lg overflow-hidden;
-    @apply transition-all duration-200 hover:border-primary/20;
-    box-shadow: var(--shadow-card);
+    @apply backdrop-blur-xl bg-card/10 border border-white/10 rounded-2xl;
+    @apply shadow-[var(--shadow-card)];
   }
   
-  .glass-card:hover {
-    box-shadow: var(--shadow-card);
-    transform: translateY(-2px);
+  /* Floating Animation */
+  .floating {
+    animation: floating 3s ease-in-out infinite;
   }
   
-  /* Clean Background */
-  .cosmic-bg {
-    @apply bg-background;
+  /* Glow Effect */
+  .glow-primary {
+    box-shadow: var(--shadow-glow);
   }
   
-  /* Clean Hover Effects */
-  .hover-lift {
-    @apply transition-all duration-200 hover:scale-[1.02];
+  .glow-accent {
+    box-shadow: var(--shadow-accent-glow);
   }
   
-  .hover-lift:hover {
-    box-shadow: var(--shadow-card);
-  }
-  
-  /* Clean Skill Badge */
-  .skill-badge {
-    @apply bg-secondary text-secondary-foreground border border-border rounded-lg px-4 py-2;
-    @apply transition-all duration-200 hover:border-primary hover:text-primary;
-    box-shadow: var(--shadow-clean);
-  }
-  
-  .skill-badge:hover {
-    box-shadow: var(--shadow-clean);
-  }
-  
-  /* Clean Gradient Text */
+  /* Animated Gradient Text */
   .gradient-text {
-    @apply text-primary font-bold;
+    @apply bg-gradient-to-r from-primary via-accent to-primary-glow bg-clip-text text-transparent;
+    background-size: 200% 200%;
+    animation: gradient-shift 3s ease infinite;
   }
   
-  /* Section Divider */
-  .section-divider {
-    @apply w-full h-px bg-primary/20 my-12;
+  /* Interactive Hover Cards */
+  .hover-lift {
+    @apply transition-all duration-500 hover:scale-105 hover:shadow-[var(--shadow-floating)];
   }
   
-  /* Clean Link Underline */
-  .clean-link {
-    @apply text-foreground hover:text-primary transition-colors duration-200 relative;
-  }
-  
-  .clean-link::after {
-    content: '';
-    @apply absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-200;
-  }
-  
-  .clean-link:hover::after {
-    @apply w-full;
+  /* Skill Badge */
+  .skill-badge {
+    @apply px-4 py-2 bg-gradient-to-r from-secondary to-secondary/80 rounded-lg;
+    @apply border border-accent/20 text-foreground font-medium;
+    @apply hover:border-accent/40 transition-all duration-300 hover:scale-105;
   }
 }
 
 @layer utilities {
-  /* Clean Keyframes */
+  /* Custom Keyframes */
+  @keyframes floating {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+  
+  @keyframes gradient-shift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+  
+  @keyframes pulse-glow {
+    0%, 100% { 
+      box-shadow: 0 0 20px hsla(var(--primary), 0.3);
+    }
+    50% { 
+      box-shadow: 0 0 40px hsla(var(--primary), 0.6), 0 0 60px hsla(var(--accent), 0.3);
+    }
+  }
+  
   @keyframes slide-in-up {
     from {
       opacity: 0;
-      transform: translateY(30px);
+      transform: translateY(50px);
     }
     to {
       opacity: 1;
@@ -215,7 +211,7 @@
   @keyframes fade-in-left {
     from {
       opacity: 0;
-      transform: translateX(-30px);
+      transform: translateX(-50px);
     }
     to {
       opacity: 1;
@@ -223,42 +219,29 @@
     }
   }
   
-  @keyframes gentle-bounce {
-    0%, 100% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(-4px);
-    }
-  }
-  
-  /* Clean Animation Classes */
+  /* Animation Classes */
   .animate-slide-up {
     animation: slide-in-up 0.8s ease-out;
   }
   
   .animate-fade-left {
-    animation: fade-in-left 0.6s ease-out;
+    animation: fade-in-left 0.8s ease-out;
   }
   
-  .animate-gentle-bounce {
-    animation: gentle-bounce 2s ease-in-out infinite;
+  .animate-pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
   }
   
   /* Animation Delays */
-  .animation-delay-200 {
-    animation-delay: 200ms;
+  .animation-delay-300 {
+    animation-delay: 0.3s;
   }
   
-  .animation-delay-400 {
-    animation-delay: 400ms;
+  .animation-delay-700 {
+    animation-delay: 0.7s;
   }
   
-  .animation-delay-600 {
-    animation-delay: 600ms;
-  }
-  
-  .animation-delay-800 {
-    animation-delay: 800ms;
+  .animation-delay-1000 {
+    animation-delay: 1s;
   }
 }

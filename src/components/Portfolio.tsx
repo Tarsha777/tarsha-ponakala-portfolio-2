@@ -83,14 +83,14 @@ const Portfolio = () => {
       image: portfolio,
       tech: ["React", "Tailwind CSS", "JavaScript", "Vite","TypeScript"],
       github: "https://github.com/Tarsha777/tarsha-ponakala-portfolio-forge",
-      demo:"https://tarsha-ponakala-portfolio.vercel.app/"
+      demo:"https://tarsha-ponakala-portfolio.vercel.app/";
     },
     {
       title: "Sentiment Analysis Model",
       description: "Developed ML model classifying Product reviews as Positive, Negative, or Neutral. Enabled Product ratings based on automated sentiment analysis of reviews. Optimized models using real-world datasets for high accuracy.",
       image: sentimentAnalysis,
       tech: ["Python", "NLP", "ML", "Data Visualization"],
-      github: "https://github.com/Tarsha777/Prodigy"
+      github: "https://github.com/Tarsha777/Prodigy",
       
     },
     {
@@ -98,15 +98,15 @@ const Portfolio = () => {
       description: "ATM system prototype with transaction simulation, PIN authentication, and secure operations.",
       tech: ["Java", "OOP", "CLI Interface", "Banking Simulation"],
       
-      image: atm  // Import at the top
+      image: atm,  // Import at the top
     },
     {
       title: "Habit Tracker with AI Insights(Under-development)",
       description: "Habit tracking app to track habits, with AI-based productivity suggestions and gamified achievements.",
       image: habit,
       tech: ["React", "Node.js", "MongoDB", "AI"],
-      github: "https://github.com/Tarsha777/Habit-tracker-MERN"
-    },
+      github: "https://github.com/Tarsha777/Habit-tracker-MERN",
+    }
     
     
   ];
@@ -132,7 +132,7 @@ const Portfolio = () => {
   ];
 
   return (
-    <div className="min-h-screen cosmic-bg text-foreground overflow-x-hidden">
+    <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
       {/* Floating CTA Button */}
       <div className="fixed bottom-8 right-8 z-50">
         <Button 
@@ -218,19 +218,19 @@ const Portfolio = () => {
             <div className="order-1 lg:order-2 text-center lg:text-left">
               <div className="floating">
                 <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold font-montserrat mb-6 leading-none">
-                  <span className="gradient-text drop-shadow-2xl">Tarsha</span>
+                  <span className="gradient-text">Tarsha</span>
                   <br />
-                  <span className="gradient-text drop-shadow-2xl">Siva Teja</span>
+                  <span className="gradient-text">Siva Teja</span>
                   <br />
-                  <span className="gradient-text text-4xl md:text-5xl lg:text-6xl drop-shadow-2xl">Ponakala</span>
+                  <span className="gradient-text text-4xl md:text-5xl lg:text-6xl">Ponakala</span>
                 </h1>
               </div>
               
-              <p className="text-xl md:text-2xl lg:text-3xl font-light text-accent mb-8 animate-fade-left drop-shadow-lg">
-                ✨ AI & Software Developer
+              <p className="text-xl md:text-2xl lg:text-3xl font-light text-accent mb-8 animate-fade-left">
+                AI & Software Developer
               </p>
-              <p className="text-lg md:text-xl text-muted-foreground mb-8 animate-fade-left animation-delay-300 drop-shadow-md">
-                🚀 IoT & ML Enthusiast | Future Tech Innovator
+              <p className="text-lg md:text-xl text-muted-foreground mb-8 animate-fade-left animation-delay-300">
+                IoT & ML Enthusiast | Future Tech Innovator
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center mb-12">
@@ -245,7 +245,7 @@ const Portfolio = () => {
   target="_blank" 
   rel="noopener noreferrer"
 >
-  <Button variant="outline" className="border-primary/40 text-foreground hover:bg-primary/10 hover:border-primary hover:text-primary px-8 py-4 text-lg backdrop-blur-sm bg-background/20 hover:shadow-cosmic">
+  <Button variant="outline" className="border-accent text-accent hover:bg-accent hover:text-accent-foreground px-8 py-4 text-lg">
     <Download className="w-5 h-5 mr-2" />
     Download Resume
   </Button>
@@ -274,7 +274,7 @@ const Portfolio = () => {
         <div className="max-w-6xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="text-5xl font-bold font-montserrat mb-8 gradient-text drop-shadow-xl">🌌 About Me</h2>
+              <h2 className="text-5xl font-bold font-montserrat mb-8 gradient-text">About Me</h2>
               <p className="text-xl text-muted-foreground leading-relaxed mb-8">
               Computer Science undergrad specializing in AI and Software Development. Skilled in building scalable solutions and
  integrating AI/ML into real-world products. Strong in cloud computing, full-stack web development, and IoT systems.
@@ -318,12 +318,10 @@ const Portfolio = () => {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="py-24 px-6 relative">
-        {/* Cosmic Section Background */}
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-nebula-purple/10 to-transparent"></div>
+      <section id="projects" className="py-24 px-6 bg-gradient-to-br from-card/50 to-transparent">
 
-        <div className="max-w-7xl mx-auto relative z-10">
-          <h2 className="text-5xl font-bold font-montserrat text-center mb-16 gradient-text drop-shadow-xl">✨ Featured Projects</h2>
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-5xl font-bold font-montserrat text-center mb-16 gradient-text">Featured Projects</h2>
           
           <div className="grid lg:grid-cols-3 gap-8">
             {projects.map((project, index) => (
@@ -407,7 +405,7 @@ const Portfolio = () => {
       {/* Skills Section */}
       <section className="py-24 px-6">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-5xl font-bold font-montserrat text-center mb-16 gradient-text drop-shadow-xl">🛸 Technical Skills</h2>
+          <h2 className="text-5xl font-bold font-montserrat text-center mb-16 gradient-text">Technical Skills</h2>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {Object.entries(skills).map(([category, skillList], index) => (
@@ -435,7 +433,7 @@ const Portfolio = () => {
       {/* Certifications Section */}
       <section className="py-24 px-6 bg-gradient-to-br from-card/30 to-transparent">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-5xl font-bold font-montserrat text-center mb-16 gradient-text drop-shadow-xl">🎓 Certifications</h2>
+          <h2 className="text-5xl font-bold font-montserrat text-center mb-16 gradient-text">Certifications</h2>
           
           <div className="grid md:grid-cols-2 gap-6">
             {visibleCertifications.map((cert, index) => (
@@ -506,7 +504,7 @@ const Portfolio = () => {
       {/* Contact Section */}
       <section id="contact" className="py-24 px-6 bg-gradient-to-br from-card/50 to-transparent">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-5xl font-bold font-montserrat text-center mb-16 gradient-text drop-shadow-xl">🌟 Get In Touch</h2>
+          <h2 className="text-5xl font-bold font-montserrat text-center mb-16 gradient-text">Get In Touch</h2>
           
           <div className="grid lg:grid-cols-2 gap-12">
             <div>
