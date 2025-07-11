@@ -2,83 +2,90 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Realistic Cosmos Portfolio Design System - All colors MUST be HSL */
+/* Futuristic Portfolio Design System - All colors MUST be HSL */
 
 @layer base {
   :root {
-    /* Deep Space Core Colors */
-    --background: 228 26% 5%;     /* Deep muted navy #0b0c1a */
-    --foreground: 210 15% 88%;    /* Soft white text */
+    /* Cosmos Core Colors */
+    --background: 240 25% 3%;
+    --foreground: 240 10% 95%;
 
-    --card: 228 20% 8%;           /* Slightly lighter space */
-    --card-foreground: 210 15% 88%;
+    --card: 240 20% 6%;
+    --card-foreground: 240 10% 95%;
 
-    --popover: 228 22% 10%;
-    --popover-foreground: 210 15% 88%;
+    --popover: 240 20% 8%;
+    --popover-foreground: 240 10% 95%;
 
-    /* Aurora Primary Colors */
-    --primary: 196 45% 58%;       /* Cool teal #80e0ff */
-    --primary-foreground: 228 26% 5%;
-    --primary-glow: 196 55% 68%;
+    /* Cosmic Primary Colors */
+    --primary: 250 100% 70%;
+    --primary-foreground: 240 25% 3%;
+    --primary-glow: 245 100% 80%;
 
-    /* Nebula Secondary Colors */
-    --secondary: 220 13% 25%;     /* Muted aurora blue #2b2d42 */
-    --secondary-foreground: 210 15% 88%;
+    /* Cosmic Secondary Colors */
+    --secondary: 260 85% 45%;
+    --secondary-foreground: 240 10% 95%;
 
-    --muted: 228 18% 12%;
-    --muted-foreground: 210 10% 65%;
+    --muted: 240 20% 12%;
+    --muted-foreground: 240 10% 70%;
 
-    --accent: 265 45% 68%;        /* Faint nebula purple #7f5af0 */
-    --accent-foreground: 228 26% 5%;
-    --accent-glow: 265 55% 78%;
+    --accent: 280 100% 65%;
+    --accent-foreground: 240 25% 3%;
+    --accent-glow: 285 100% 75%;
 
-    --destructive: 0 65% 55%;
-    --destructive-foreground: 210 15% 88%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 240 10% 95%;
 
-    --border: 228 15% 18%;
-    --input: 228 18% 12%;
-    --ring: 196 45% 58%;
+    --border: 240 20% 15%;
+    --input: 240 20% 12%;
+    --ring: 250 100% 70%;
 
     --radius: 1rem;
 
-    /* Deep Space Extended Colors */
-    --void-black: 228 30% 3%;
-    --stellar-gray: 220 8% 20%;
-    --aurora-blue: 196 45% 58%;
-    --starlight: 210 15% 88%;
-    --deep-void: 228 35% 2%;
+    /* Cosmos Extended Colors */
+    --deep-space: 240 30% 2%;
+    --nebula-purple: 270 85% 25%;
+    --cosmic-blue: 250 100% 70%;
+    --starlight: 240 5% 90%;
+    --void: 240 35% 1%;
 
-    /* Realistic Space Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(196, 45%, 58%) 0%, hsl(265, 35%, 48%) 100%);
-    --gradient-space: linear-gradient(135deg, hsl(228, 26%, 5%) 0%, hsl(228, 30%, 3%) 50%, hsl(220, 20%, 8%) 100%);
-    --gradient-aurora: linear-gradient(135deg, hsl(196, 25%, 18%) 0%, hsl(265, 25%, 15%) 100%);
-    --gradient-starfield: radial-gradient(ellipse at center, hsl(228, 26%, 5%) 0%, hsl(228, 30%, 3%) 100%);
-    --gradient-card: linear-gradient(135deg, hsla(228, 20%, 8%, 0.6) 0%, hsla(220, 15%, 12%, 0.8) 100%);
+    /* Cosmos Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(250, 100%, 70%) 0%, hsl(280, 100%, 65%) 100%);
+    --gradient-nebula: linear-gradient(135deg, hsl(240, 30%, 2%) 0%, hsl(260, 85%, 15%) 50%, hsl(280, 100%, 25%) 100%);
+    --gradient-cosmic: linear-gradient(135deg, hsl(250, 100%, 70%) 0%, hsl(270, 85%, 60%) 50%, hsl(280, 100%, 65%) 100%);
+    --gradient-starfield: radial-gradient(ellipse at center, hsl(240, 25%, 3%) 0%, hsl(240, 30%, 2%) 100%);
+    --gradient-card: linear-gradient(135deg, hsla(240, 20%, 6%, 0.8) 0%, hsla(260, 20%, 8%, 0.9) 100%);
     
-    /* Subtle Cosmic Glows */
-    --shadow-aurora: 0 0 20px hsla(196, 45%, 58%, 0.15);
-    --shadow-nebula: 0 8px 25px hsla(265, 35%, 48%, 0.12);
-    --shadow-starlight: 0 0 30px hsla(196, 45%, 58%, 0.2);
-    --glow-primary: 0 0 25px hsla(196, 45%, 58%, 0.3);
-    --glow-accent: 0 0 25px hsla(265, 35%, 48%, 0.25);
+    /* Cosmos Shadows & Glows */
+    --shadow-cosmic: 0 0 30px hsla(250, 100%, 70%, 0.3);
+    --shadow-nebula: 0 8px 32px hsla(280, 100%, 65%, 0.2);
+    --shadow-starlight: 0 0 50px hsla(250, 100%, 70%, 0.4);
+    --glow-primary: 0 0 40px hsl(250, 100%, 70%);
+    --glow-accent: 0 0 40px hsl(280, 100%, 65%);
 
-    /* Smooth Space Animations */
-    --transition-smooth: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-cosmic: all 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    /* Cosmos Animations */
+    --transition-smooth: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-cosmic: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 
     --sidebar-background: 0 0% 98%;
+
     --sidebar-foreground: 240 5.3% 26.1%;
+
     --sidebar-primary: 240 5.9% 10%;
+
     --sidebar-primary-foreground: 0 0% 98%;
+
     --sidebar-accent: 240 4.8% 95.9%;
+
     --sidebar-accent-foreground: 240 5.9% 10%;
+
     --sidebar-border: 220 13% 91%;
+
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
   .dark {
-    --background: 228 26% 5%;
-    --foreground: 210 15% 88%;
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
 
     --card: 222.2 84% 4.9%;
     --card-foreground: 210 40% 98%;
@@ -131,97 +138,56 @@
 }
 
 @layer components {
-  /* Deep Space Hero Button */
+  /* Cosmic Hero Button */
   .btn-hero {
-    @apply relative overflow-hidden bg-gradient-to-r from-primary to-accent text-primary-foreground px-8 py-4 rounded-xl font-medium text-lg;
-    @apply transition-all duration-700 hover:scale-[1.02];
-    box-shadow: var(--shadow-aurora);
+    @apply relative overflow-hidden bg-gradient-to-r from-primary to-accent text-primary-foreground px-8 py-4 rounded-2xl font-semibold text-lg;
+    @apply transition-all duration-500 hover:scale-105;
+    box-shadow: var(--shadow-cosmic);
   }
   
   .btn-hero::before {
     content: '';
-    @apply absolute inset-0 bg-gradient-to-r from-accent to-primary opacity-0 transition-opacity duration-700;
+    @apply absolute inset-0 bg-gradient-to-r from-accent to-primary opacity-0 transition-opacity duration-500;
   }
   
   .btn-hero:hover::before {
     @apply opacity-100;
   }
   
-  .btn-hero:hover {
-    box-shadow: var(--glow-primary);
-  }
-  
-  /* Ethereal Glass Card */
+  /* Cosmic Glass Card */
   .glass-card {
-    @apply relative bg-gradient-to-br from-card/60 to-muted/30 backdrop-blur-md border border-border rounded-xl;
-    @apply transition-all duration-700 hover:border-primary/30 overflow-hidden;
-    box-shadow: var(--shadow-nebula), inset 0 1px 0 hsla(210, 15%, 88%, 0.05);
+    @apply relative bg-gradient-to-br from-card/40 to-muted/20 backdrop-blur-xl border border-primary/20 rounded-2xl shadow-2xl;
+    @apply transition-all duration-500 hover:border-accent/40 overflow-hidden;
+    box-shadow: var(--shadow-nebula), inset 0 1px 0 hsla(240, 10%, 95%, 0.1);
   }
   
   .glass-card::before {
     content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(135deg, hsla(196, 45%, 58%, 0.03) 0%, hsla(265, 45%, 68%, 0.03) 100%);
-    opacity: 0;
-    transition: opacity 0.7s ease;
+    @apply absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5 opacity-0 transition-opacity duration-500;
   }
   
   .glass-card:hover::before {
-    opacity: 1;
+    @apply opacity-100;
   }
   
-  .glass-card:hover {
-    box-shadow: var(--shadow-starlight);
-  }
-  
-  /* Constellation Background */
+  /* Cosmic Background */
   .cosmic-bg {
     background: var(--gradient-starfield);
     position: relative;
-    overflow: hidden;
   }
   
   .cosmic-bg::before {
     content: '';
-    position: absolute;
-    inset: 0;
-    opacity: 0.25;
+    @apply absolute inset-0 opacity-30;
     background-image: 
-      /* Constellation Orion */
-      radial-gradient(1.5px 1.5px at 15% 20%, hsl(210, 15%, 88%), transparent),
-      radial-gradient(1px 1px at 18% 25%, hsl(196, 35%, 68%), transparent),
-      radial-gradient(1px 1px at 12% 30%, hsl(210, 15%, 88%), transparent),
-      radial-gradient(1.5px 1.5px at 20% 35%, hsl(196, 25%, 58%), transparent),
-      radial-gradient(1px 1px at 16% 40%, hsl(210, 15%, 88%), transparent),
-      
-      /* Constellation Cassiopeia */
-      radial-gradient(1px 1px at 70% 15%, hsl(265, 25%, 68%), transparent),
-      radial-gradient(1.5px 1.5px at 75% 18%, hsl(210, 15%, 88%), transparent),
-      radial-gradient(1px 1px at 80% 22%, hsl(196, 35%, 58%), transparent),
-      radial-gradient(1px 1px at 85% 20%, hsl(210, 15%, 88%), transparent),
-      radial-gradient(1.5px 1.5px at 90% 16%, hsl(265, 25%, 58%), transparent),
-      
-      /* Random stars scattered */
-      radial-gradient(0.5px 0.5px at 25% 60%, hsl(210, 15%, 88%), transparent),
-      radial-gradient(0.8px 0.8px at 35% 70%, hsl(196, 25%, 58%), transparent),
-      radial-gradient(0.5px 0.5px at 55% 50%, hsl(210, 15%, 88%), transparent),
-      radial-gradient(1px 1px at 65% 75%, hsl(265, 25%, 68%), transparent),
-      radial-gradient(0.5px 0.5px at 85% 85%, hsl(210, 15%, 88%), transparent),
-      radial-gradient(0.8px 0.8px at 45% 80%, hsl(196, 35%, 58%), transparent);
-    background-repeat: no-repeat;
-    animation: constellation-twinkle 8s ease-in-out infinite;
-  }
-  
-  /* Nebula overlay */
-  .cosmic-bg::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    opacity: 0.1;
-    background: radial-gradient(ellipse 40% 80% at 30% 70%, hsla(265, 45%, 68%, 0.4) 0%, transparent 50%),
-                radial-gradient(ellipse 60% 40% at 80% 20%, hsla(196, 45%, 58%, 0.3) 0%, transparent 50%);
-    animation: nebula-drift 15s ease-in-out infinite;
+      radial-gradient(2px 2px at 20px 30px, hsl(240, 10%, 95%), transparent),
+      radial-gradient(2px 2px at 40px 70px, hsl(250, 100%, 70%), transparent),
+      radial-gradient(1px 1px at 90px 40px, hsl(280, 100%, 65%), transparent),
+      radial-gradient(1px 1px at 130px 80px, hsl(240, 10%, 95%), transparent),
+      radial-gradient(2px 2px at 160px 30px, hsl(250, 100%, 70%), transparent);
+    background-repeat: repeat;
+    background-size: 200px 100px;
+    animation: starfield 20s linear infinite;
   }
   
   /* Floating Animation */
@@ -254,15 +220,15 @@
     box-shadow: var(--shadow-starlight);
   }
   
-  /* Ethereal Skill Badge */
+  /* Cosmic Skill Badge */
   .skill-badge {
-    @apply relative bg-gradient-to-r from-secondary/70 to-accent/40 text-foreground border border-border rounded-full px-4 py-2;
-    @apply transition-all duration-500 hover:border-primary/40;
-    box-shadow: var(--shadow-nebula);
+    @apply relative bg-gradient-to-r from-secondary/80 to-accent/60 text-foreground border border-primary/30 rounded-full px-4 py-2;
+    @apply transition-all duration-300 hover:border-accent/60;
+    box-shadow: 0 4px 15px hsla(280, 100%, 65%, 0.2);
   }
   
   .skill-badge:hover {
-    box-shadow: var(--shadow-aurora);
+    box-shadow: var(--shadow-cosmic);
   }
 }
 
@@ -343,17 +309,6 @@
     50% {
       opacity: 1;
       transform: scale(1.1);
-    }
-  }
-  
-  @keyframes constellation-twinkle {
-    0%, 100% {
-      opacity: 0.25;
-      filter: brightness(1);
-    }
-    50% {
-      opacity: 0.4;
-      filter: brightness(1.3);
     }
   }
   
