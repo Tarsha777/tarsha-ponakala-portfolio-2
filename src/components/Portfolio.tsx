@@ -34,6 +34,7 @@ import habit from "@/assets/Habit-Tracker.jpg"
 import selfDrivingCar from "@/assets/self-driving-car.png";
 import logisticsPlatform from "@/assets/green.jpg";
 import sentimentAnalysis from "@/assets/sentiment-analysis.jpg";
+import caleasy from "@/assets/caleasy_image.png";
 
 const Portfolio = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -92,6 +93,14 @@ const Portfolio = () => {
       tech: ["Python", "NLP", "ML", "Data Visualization"],
       github: "https://github.com/Tarsha777/Prodigy"
       
+    },
+    {
+      title: "Caleasy - Quick and Easy Calculator",
+      description: "A quick and easy calculator with a modern, responsive design.",
+      tech: ["HTML", "CSS", "TypeScript", "Vite", "React"],
+      github: "https://github.com/Tarsha777/Caleasy",
+      demo: "https://caleasy-delta.vercel.app/",
+      image: caleasy // Import at the top
     },
     {
       title: "ATM Simulation Project",
